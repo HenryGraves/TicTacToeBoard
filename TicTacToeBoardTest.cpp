@@ -15,17 +15,23 @@ class TicTacToeBoardTest : public ::testing::Test
 };
 
 /* EXAMPLE TEST FORMAT */
+TEST(TicTacToeBoardTest, sanity) {
+	TicTacToeBoard board;
+	ASSERT_TRUE(true);
+}
+
+
 TEST(TicTacToeBoardTest, initial_toggleTurnTest)
 {
 	TicTacToeBoard board;
-	ASSERT_TRUE(board.toggleTrun(), O);
+	ASSERT_EQ(board.toggleTrun(), O);
 }
 
 TEST(TicTacToeBoardTest, fromOtoX_toggleTurnTest)
 {
 	TicTacToeBoard board;
 	board.toggleTurn();
-	ASSERT_TRUE(board.toggleTrun(), X);
+	ASSERT_EQ(board.toggleTrun(), X);
 }
 
 // comment
