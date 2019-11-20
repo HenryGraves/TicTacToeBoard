@@ -24,14 +24,14 @@ TEST(TicTacToeBoardTest, sanity) {
 TEST(TicTacToeBoardTest, initial_toggleTurnTest)
 {
 	TicTacToeBoard board;
-	ASSERT_EQ(board.toggleTrun(), O);
+	ASSERT_EQ(board.toggleTurnn(), O);
 }
 
 TEST(TicTacToeBoardTest, fromOtoX_toggleTurnTest)
 {
 	TicTacToeBoard board;
 	board.toggleTurn();
-	ASSERT_EQ(board.toggleTrun(), X);
+	ASSERT_EQ(board.toggleTurn(), X);
 }
 
 // comment
