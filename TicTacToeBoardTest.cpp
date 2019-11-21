@@ -34,4 +34,15 @@ TEST(TicTacToeBoardTest, fromOtoX_toggleTurnTest)
 	ASSERT_EQ(board.toggleTurn(), X);
 }
 
-// comment
+TEST(TicTacToeBoardTest, fromXtoO_toggleTurnTest)
+{
+	TicTacToeBoard board;
+	board.toggleTurn();
+	board.toggleTurn();
+	ASSERT_EQ(board.toggleTurn(), O);
+}
+
+TEST(TicTacToeBoardTest, outOfBounds_placePieceTest) {
+	TicTacToeBoard board;
+	ASSERT_EQ(board.placePiece(3,3), Invalid);
+}
