@@ -49,5 +49,5 @@ TEST(TicTacToeBoardTest, outOfBounds_placePieceTest) {
 
 TEST(TicTacToeBoardTest, inBounds_placePieceTest) {
 	TicTacToeBoard board;
-	ASSERT_EQ(board.placePiece(0,0) X);
+	ASSERT_EQ(board.placePiece(0,0), X);
 }
