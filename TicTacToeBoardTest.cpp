@@ -42,9 +42,14 @@ TEST(TicTacToeBoardTest, fromXtoO_toggleTurnTest)
 	ASSERT_EQ(board.toggleTurn(), O);
 }
 
-TEST(TicTacToeBoardTest, outOfBounds_placePieceTest) {
+TEST(TicTacToeBoardTest, outOfBoundsPositive_placePieceTest) {
 	TicTacToeBoard board;
 	ASSERT_EQ(board.placePiece(3,3), Invalid);
+}
+
+TEST(TicTacToeBoardTest, outOfBoundsNegative_placePieceTest) {
+	TicTacToeBoard board;
+	ASSERT_EQ(board.placePiece(-1,-1), Invalid);
 }
 
 TEST(TicTacToeBoardTest, inBounds_placePieceTest) {
@@ -52,9 +57,14 @@ TEST(TicTacToeBoardTest, inBounds_placePieceTest) {
 	ASSERT_EQ(board.placePiece(0,0), X);
 }
 
-TEST(TicTacToeBoardTest, outOfBounds_getPiece) {
+TEST(TicTacToeBoardTest, outOfBoundsPositive_getPiece) {
 	TicTacToeBoard board;
 	ASSERT_EQ(board.getPiece(3,3), Invalid);
+}
+
+TEST(TicTacToeBoardTest, outOfBoundsNegative_getPiece) {
+	TicTacToeBoard board;
+	ASSERT_EQ(board.getPiece(-1,-1), Invalid);
 }
 
 TEST(TicTacToeBoardTest, inBounds_getPiece) {
