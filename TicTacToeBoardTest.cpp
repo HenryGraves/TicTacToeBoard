@@ -47,7 +47,22 @@ TEST(TicTacToeBoardTest, outOfBounds_placePieceTest) {
 	ASSERT_EQ(board.placePiece(3,3), Invalid);
 }
 
-// TEST(TicTacToeBoardTest, inBounds_placePieceTest) {
-// 	TicTacToeBoard board;
-// 	ASSERT_EQ(board.placePiece(0,0), X);
-// }
+TEST(TicTacToeBoardTest, inBounds_placePieceTest) {
+	TicTacToeBoard board;
+	ASSERT_EQ(board.placePiece(0,0), X);
+}
+
+TEST(TicTacToeBoardTest, outOfBounds_getPiece) {
+	TicTacToeBoard board;
+	ASSERT_EQ(board.getPiece(3,3), Invalid);
+}
+
+TEST(TicTacToeBoardTest, inBounds_getPiece) {
+	TicTacToeBoard board;
+	ASSERT_EQ(board.getPiece(1,1), X);
+}
+
+TEST(TicTacToeBoardTest, getWinnerTest) {
+	TicTacToeBoard board;
+	ASSERT_EQ(board.getWinnder(), Invalid);
+}
