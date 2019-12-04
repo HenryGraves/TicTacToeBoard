@@ -64,5 +64,5 @@ TEST(TicTacToeBoardTest, inBounds_getPiece) {
 
 TEST(TicTacToeBoardTest, getWinnerTest) {
 	TicTacToeBoard board;
-	ASSERT_EQ(board.getWinnder(), Invalid);
+	ASSERT_EQ(board.getWinner(), Invalid);
 }
